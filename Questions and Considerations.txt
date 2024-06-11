@@ -1,0 +1,28 @@
+Questions and Considerations
+
+How would you deploy this application in production?
+Containerization: Use Docker to containerize the application.
+Orchestration: Deploy using Kubernetes or a similar orchestration tool.
+CI/CD: Set up continuous integration and deployment pipelines using tools like Jenkins or GitHub Actions.
+
+What other components would you want to add to make this production ready?
+Monitoring and Logging: Integrate with tools like Prometheus, Grafana, and ELK stack.
+Security: Implement secrets management and ensure secure connections (e.g., HTTPS, SSL/TLS).
+Scalability: Use auto-scaling for the application components and optimize database performance.
+
+How can this application scale with a growing dataset?
+Message Queue: SQS can handle a large volume of messages.
+Database Scaling: Use partitioning, indexing, and potentially a managed database service like Amazon RDS.
+
+How can PII be recovered later on?
+Encryption: Store original PII securely encrypted if recovery is needed.
+Key Management: Use a robust key management system to handle encryption keys.
+
+What are the assumptions you made?
+PII Masking: Assumed that masking should be one-way (irreversible) to protect user privacy.
+Data Structure: Assumed the JSON data structure is consistent with the provided schema.
+
+This approach ensures a well-structured, scalable, and secure application.
+
+
+
